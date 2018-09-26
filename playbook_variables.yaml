@@ -1,0 +1,11 @@
+---
+ - name: Validating our Group and Host vars
+   gather_facts: no
+   hosts: csr
+   tasks:
+    - name: Print Group vars
+      debug:
+        msg: "{{ ntp1 }}"
+    - name: Print Host vars
+      debug:
+        msg: "{{ timezone }}"  
